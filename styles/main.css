@@ -34,7 +34,7 @@ html {
 }
 
 body {
-    background-color: var(--color-primary);
+    background-color: var(--color-background);
     display: flex;
     align-items: center;
     justify-content: center;
