@@ -61,3 +61,9 @@
     right: 1.6rem;
     bottom: 1px;
 }
+
+label small {
+    font-size: 1.1rem;
+    padding-left: 1.2rem;
+    color: var(--color-small-info);
+}
