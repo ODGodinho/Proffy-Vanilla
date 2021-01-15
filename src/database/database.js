@@ -1,6 +1,6 @@
 const Database = require("sqlite-async");
 
-Database
+module.exports = Database
     .open(__dirname + "/database.sqlite")
     .then((db) => {
         db.exec(`
@@ -14,7 +14,7 @@ Database
 
             CREATE TABLE IF NOT EXISTS classes (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
-                subject TEXT,
+                subject INTEGER,
                 cost TEXT,
                 proffy_id INTEGER
             );
@@ -26,6 +26,6 @@ Database
                 time_from INTEGER, 
                 time_to INTEGER
             );
-
         `);
+        return db;
     });
